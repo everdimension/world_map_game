@@ -16,8 +16,8 @@ class AmMap extends React.Component {
 
 		let dataProvider = {
 			map: 'worldLow',
-			images: [{ latitude: 51.32423, longitude: 0, type: 'circle', color: '#6c00ff', labelShiftY: 20, label: 'London' }],
-			areas: [{ id: 'AU', color: '#cc0000' }, { id: 'US' } ],
+			// images: [{ latitude: 51.32423, longitude: 0, type: 'circle', color: '#fff', labelColor: '#fff', labelShiftY: 20, label: 'London' }],
+			// areas: [{ id: 'AU', color: '#cc0000' }, { id: 'US', showAsSelected: true } ],
 			getAreasFromMap: true
 		};
 
@@ -38,7 +38,7 @@ class AmMap extends React.Component {
 
 	render() {
 		return (
-			<div id="mapBox"></div>
+			<div id="mapBox" className="Map"></div>
 		);
 	}
 

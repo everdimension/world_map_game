@@ -2,23 +2,25 @@ import dispatcher from '../core/dispatcher';
 import { EventEmitter } from 'events';
 
 class QuizStore extends EventEmitter {
-	constructor(props) {
+	constructor (props) {
 		super(props);
-		this.quiz = {
-			currentQuestion: {
-				country: 'default africa'
-			}
+		this.currentQuestion = {
+			country: 'default africa'
 		};
 	}
 
-	importQuiz(quiz) {
+	setQuestion (question) {
+		this.currentQuestion = question;
+	}
+
+	importQuiz (quiz) {
 		console.log('importing quiz');
 		this.quiz = quiz;
 	}
 
-	getState() {
+	getState () {
 		return {
-			question: this.quiz.currentQuestion || 'question'
+			question: this.currentQuestion || 'question'
 		};
 	}
 
@@ -40,10 +42,11 @@ let quizStore = new QuizStore();
 
 dispatcher.register(function (action) {
 	if (action.type === 'COUNTRIES_DATA') {
-		quizStore.importQuiz(action.payload.quiz);
+		quizStore.setQuestion(action.payload.question);
 
 	} else if (action.type === 'NEW_QUESTION') {
-		quizStore.quiz.getQuestion();
+		quizStore.setQuestion(action.payload.question);
+		// quizStore.quiz.getQuestion();
 	} else {
 		// do nothing
 		return;

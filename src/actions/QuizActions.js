@@ -4,6 +4,8 @@ import CountryQuiz from '../services/QuizService';
 
 window.http = http;
 
+let quiz;
+
 const QuizActions = {
 
 	fetchCountries: function() {
@@ -17,7 +19,7 @@ const QuizActions = {
 
 	loadCountries: function (data) {
 		console.log('creating quiz...');
-		let quiz = new CountryQuiz({
+		quiz = new CountryQuiz({
 			countries: data,
 			type: 'capitals'
 		});
@@ -25,18 +27,26 @@ const QuizActions = {
 		dispatcher.dispatch({
 			type: 'COUNTRIES_DATA',
 			payload: {
-				quiz
+				question: quiz.getQuestion()
 			}
 		});
 	},
 
-	startQuizzing: function() {
-		setInterval(function() {
-			dispatcher.dispatch({
-				type: 'NEW_QUESTION',
-				payload: null
-			});
-		}, 4000);
+	dispatchQuestion: function (question) {
+		dispatcher.dispatch({
+			type: 'NEW_QUESTION',
+			payload: {
+				question
+			}
+		});
+	},
+
+	startQuiz: function() {
+		quiz.startQuiz(QuizActions.dispatchQuestion);
+	},
+
+	giveAnswer: function (answer) {
+		quiz.giveAnswer(answer);
 	},
 
 	getQuestion: function() {

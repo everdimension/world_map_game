@@ -17,7 +17,7 @@ class MapContainer extends React.Component {
 	componentDidMount() {
 		QuizActions.fetchCountries()
 			.then(function () {
-				QuizActions.startQuizzing();
+				QuizActions.startQuiz();
 			});
 		QuizStore.listen(this.onStoreChange);
 	}
@@ -29,9 +29,13 @@ class MapContainer extends React.Component {
 		return (
 			<div>
 				<AmMap selectCountry={this.state.question} />
-				<Quiz question={this.state.question} />
+				<Quiz question={this.state.question} onAnswer={this.handleAnswer} />
 			</div>
 		);
+	}
+
+	handleAnswer(answer) {
+		QuizActions.giveAnswer(answer);
 	}
 
 	onStoreChange() {

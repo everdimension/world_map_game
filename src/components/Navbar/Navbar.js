@@ -33,7 +33,6 @@ class Navbar extends React.Component {
 							</nav>
 						</div>
 						<div className="col-xs-4">
-							<p style={{color: 'white'}}>cart...</p>
 						</div>
 					</div>
 				</div>

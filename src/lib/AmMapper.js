@@ -1,26 +1,29 @@
 class AmMapper {
 	constructor(opts) {
-		this.map = new AmCharts.AmMap();
-
-		this.map.pathToImages = opts.pathToImages || 'lib/ammap/images';
-		this.map.dataProvider = opts.dataProvider || { map: 'worldLow' };
-
-		this.map.areasSettings = {
-			autoZoom: true,
-			selectedColor: '#c88a8a',
-			color: '#ccc'
+		let mapSettings = {
+			type: 'map'
 		};
 
-		this.map.zoomControl = {
+		mapSettings.pathToImages = opts.pathToImages || 'lib/ammap/images';
+		mapSettings.dataProvider = opts.dataProvider || { map: 'worldLow' };
+
+		mapSettings.areasSettings = {
+			autoZoom: true,
+			selectedColor: '#c88a8a',
+			outlineColor: '#ccc',
+			color: '#888'
+		};
+
+		mapSettings.zoomControl = {
 			zoomControlEnabled: true,
 			maxZoomLevel: 5
 		};
 
 		if (opts.zoomControl) {
-			this.map.zoomControl = opts.zoomControl;
+			mapSettings.zoomControl = opts.zoomControl;
 		}
 
-		this.map.write(opts.targetId);
+		this.map = new AmCharts.makeChart(opts.targetId, mapSettings);
 
 		window.map = this.map;
 
