@@ -26,6 +26,11 @@ class AmMapper {
 
 	}
 
+	selectCountry(countryId) {
+		console.log('selecting country...', countryId);
+		this.map.selectObject(this.map.getObjectById(countryId));
+	}
+
 }
 
 export default AmMapper;

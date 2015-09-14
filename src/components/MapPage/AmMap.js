@@ -25,6 +25,15 @@ class AmMap extends React.Component {
 			targetId: 'mapBox',
 			dataProvider
 		});
+
+		if (this.props.selectCountry && this.props.selectCountry.country_code) {
+			this.state.map.selectCountry(newProps.selectCountry.country_code);
+		}
+	}
+
+	componentWillReceiveProps(newProps) {
+		console.log('new props in AmMap', newProps);
+		this.state.map.selectCountry(newProps.selectCountry.country_code);
 	}
 
 	render() {

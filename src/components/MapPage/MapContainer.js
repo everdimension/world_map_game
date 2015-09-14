@@ -1,36 +1,42 @@
-import React from 'react';
+import React       from 'react';
 
-import AuthActions from '../../actions/AuthActions';
-import AuthStore   from '../../stores/AuthStore';
-import AmMap from './AmMap';
+import QuizActions from '../../actions/QuizActions';
+import QuizStore   from '../../stores/QuizStore';
+
+import AmMap       from './AmMap';
+import Quiz        from './Quiz';
 
 class MapContainer extends React.Component {
 
 	constructor(props) {
 		super(props);
+		this.state = QuizStore.getState();
+		this.onStoreChange = this.onStoreChange.bind(this);
 	}
 
-	// componentDidMount() {
-	// 	AuthStore.listen(this.onStoreChange);
-	// }
-	// componentWillUnmount() {
-	// 	AuthStore.unlisten(this.onStoreChange);
-	// }
+	componentDidMount() {
+		QuizActions.fetchCountries()
+			.then(function () {
+				QuizActions.startQuizzing();
+			});
+		QuizStore.listen(this.onStoreChange);
+	}
+	componentWillUnmount() {
+		QuizStore.unlisten(this.onStoreChange);
+	}
 
 	render() {
 		return (
 			<div>
-				<AmMap />
+				<AmMap selectCountry={this.state.question} />
+				<Quiz question={this.state.question} />
 			</div>
 		);
 	}
 
-	// onStoreChange() {
-	// 	this.setState(AuthStore.getState());
-	// 	if (this.state.isAuthenticated) {
-	// 		window.location.hash = '';
-	// 	}
-	// }
+	onStoreChange() {
+		this.setState(QuizStore.getState());
+	}
 }
 
 export default MapContainer;
