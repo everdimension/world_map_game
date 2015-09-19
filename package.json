@@ -1,8 +1,9 @@
 {
   "name": "store_react",
   "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --progress",
+    "dev": "webpack-dev-server --progress",
     "build": "webpack --progress",
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"

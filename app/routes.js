@@ -4,7 +4,7 @@ var jwt = require('jwt-simple');
 var User = require('./models/models').User;
 var Item = require('./models/models').Item;
 
-var tokenSecret = "service whale basic encryption";
+var tokenSecret = "basic app basic encryption token";
 
 function checkAuthentication(req, res, next) {
 	if (!req.headers.authorization) {

@@ -78,7 +78,7 @@ class MapContainer extends React.Component {
 
 	getNewQuestion() {
 		QuizActions.getQuestion();
-		this.state.questionTimeout = setTimeout(this.handleAnswer, 4000);
+		this.state.questionTimeout = setTimeout(this.handleAnswer, 5000);
 	}
 
 	handleAnswer(answer) {

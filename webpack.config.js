@@ -6,6 +6,8 @@ var nodeModulesPath = path.join(__dirname, 'node_modules');
 var srcPath = path.join(__dirname, 'src');
 var buildPath = path.join(__dirname, 'build');
 
+var publicPath = process.env.NODE_ENV === 'production' ? '/' : '/build';
+
 
 var config = {
 	entry: {
@@ -18,7 +20,7 @@ var config = {
 	output: {
 		path: buildPath,
 		filename: '[name].bundle.js',
-		publicPath: '/build'
+		publicPath: publicPath
 	},
 	module: {
 		loaders: [
