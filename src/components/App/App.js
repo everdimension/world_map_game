@@ -8,7 +8,6 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = AuthStore.getState();
-		console.log(this.state);
 		this.state.msg = 'app state message';
 		this.onStoreChange = this.onStoreChange.bind(this);
 	}
@@ -25,7 +24,7 @@ class App extends React.Component {
 		this.setState({
 			user: AuthStore.getState().user
 		});
-		console.log('auth state', AuthStore.getState());
+		// console.log('auth state', AuthStore.getState());
 
 	}
 
@@ -36,7 +35,7 @@ class App extends React.Component {
 
 	render() {
 
-		console.log('state of app', this.state);
+		// console.log('state of app', this.state);
 		let appElement = null;
 		if (window.location.hash.substr(1) !== 'map') {
 			appElement = (

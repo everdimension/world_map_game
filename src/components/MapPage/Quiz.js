@@ -1,25 +1,51 @@
 import React from 'react';
+import classNames from 'classnames';
+require('./Quiz.less');
 
 class Quiz extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	componentDidMount() {
+		React.findDOMNode(this.refs.quizInputRef).focus();
+	}
+
+	componentDidUpdate() {
+		if (!this.props.checkingAnswer) {
+			React.findDOMNode(this.refs.quizInputRef).focus();
+		}
 	}
 
 	render() {
 		let question = this.props.question;
 
-		console.log('quiz render', this.props.question);
+		let formGroupClasses = classNames('form-group form-group-lg', {
+			'has-error': this.props.isCorrect === false,
+			'has-success': this.props.isCorrect
+		});
+
+		let QuizWrapperClassess = classNames('Quiz__input-wrapper', {
+			'no-animation': this.props.checkingAnswer
+		});
+
+		let capitalName = this.props.question.capital.translations.ru;
+
+		let inputValue = this.props.checkingAnswer ? capitalName : this.props.currentAnswer;
 
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-4 col-sm-offset-4">
+					<div className="col-sm-6 col-sm-offset-3">
 						<form onSubmit={this.handleSubmit}>
-							<div className="form-group">
-								<label htmlFor="quizInput">{this.props.question.country}</label>
-								<input type="text" ref="quizInput" id="quizInput" className="form-control" />
+							<div className={formGroupClasses}>
+								<label htmlFor="quizInput">{this.props.question.translations.ru.common}</label>
+								<div className={QuizWrapperClassess}>
+									<input type="text" ref="quizInputRef" id="quizInput" value={inputValue} onChange={this.handleChange} disabled={this.props.checkingAnswer} className="form-control Quiz__input" placeholder="enter capital name..." />
+								</div>
 							</div>
 						</form>
 					</div>
@@ -30,7 +56,15 @@ class Quiz extends React.Component {
 
 	handleSubmit(evt) {
 		evt.preventDefault();
-		let answer = React.findDOMNode(this.refs.quizInput).value;
+		this.submitAnswer();
+	}
+
+	handleChange(evt) {
+		this.props.onAnswerChange(evt.target.value);
+	}
+
+	submitAnswer() {
+		let answer = React.findDOMNode(this.refs.quizInputRef).value;
 		this.props.onAnswer(answer);
 	}
 }

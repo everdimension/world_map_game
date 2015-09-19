@@ -1,0 +1,63 @@
+@import '../variables.less';
+
+@input-border-clr:             darken(#66afe9, 10%);
+@input-border-focus:           #66afe9;
+@input-border-width:           2px;
+
+.Quiz__input-wrapper {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: @input-border-width;
+		background-color: @brand-success;
+		// transition: .5s width linear;
+		animation: QuizProgress 4s linear forwards;
+	}
+
+	&.no-animation {
+		&:after {
+			animation: none;
+			display: none;
+		}
+	}
+
+}
+
+@keyframes QuizProgress {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
+}
+
+.Quiz__input {
+	color: white;
+	background-color: transparent;
+	border: none;
+	border-bottom: @input-border-width solid @input-border-clr;
+	box-shadow: none;
+
+
+
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: @input-border-focus;
+	}
+
+	.has-success & {
+		background-color: rgba(60,118,61,0.44);
+		box-shadow: none;
+	}
+	.has-error & {
+		background-color: rgba(169, 68, 66, 0.2);
+		box-shadow: none;
+	}
+}

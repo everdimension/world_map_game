@@ -33,7 +33,10 @@ var config = {
 			inject: true,
 			template: path.join(srcPath, 'index.html')
 		})
-	]
+	],
+
+	debug: true,
+	devtool: 'eval-cheap-module-source-map'
 
 	// devServer: {
 	// 	port: 3000

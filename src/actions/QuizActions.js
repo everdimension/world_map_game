@@ -5,20 +5,21 @@ import CountryQuiz from '../services/QuizService';
 window.http = http;
 
 let quiz;
+let questionTimeout;
 
 const QuizActions = {
 
 	fetchCountries: function() {
 		return http.get('/countries_data.json')
 			.then((res) => {
-				console.log('loaded countires');
-				this.loadCountries(res);
+				return res;
 			})
-			.catch(() => console.warn('failed countries'));
+			.catch(function () {
+				console.warn('failed countries');
+			});
 	},
 
 	loadCountries: function (data) {
-		console.log('creating quiz...');
 		quiz = new CountryQuiz({
 			countries: data,
 			type: 'capitals'
@@ -30,6 +31,8 @@ const QuizActions = {
 				question: quiz.getQuestion()
 			}
 		});
+
+		return true;
 	},
 
 	dispatchQuestion: function (question) {
@@ -41,16 +44,74 @@ const QuizActions = {
 		});
 	},
 
+	updateCurrentAnswer: function (answer) {
+		dispatcher.dispatch({
+			type: 'NEW_ANSWER',
+			payload: {
+				currentAnswer: answer
+			}
+		});
+	},
+
 	startQuiz: function() {
-		quiz.startQuiz(QuizActions.dispatchQuestion);
+		console.log('startQuiz fn in ACtions');
+		quiz.on('question', QuizActions.dispatchQuestion);
+		// window.quiz = quiz;
+		//
+		// setTimeout(quiz.getQuestion.bind(quiz), 500);
+		// // quiz.getQuestion();
+		// questionTimeout = setTimeout(function () {
+		// 	// quiz.giveAnswer();
+		// 	console.log('quietsion timeout!');
+		// }, 4000);
+		//
+		// quiz.startQuiz(QuizActions.dispatchQuestion);
 	},
 
 	giveAnswer: function (answer) {
-		quiz.giveAnswer(answer);
+
+		dispatcher.dispatch({
+			type: 'CHECKING_ANSWER',
+			payload: {
+				checkingAnswer: true
+			}
+		});
+
+		let isCorrect = quiz.giveAnswer(answer);
+		let score = quiz.getScore();
+
+		dispatcher.dispatch({
+			type: 'ANSWER',
+			payload: {
+				isCorrect,
+				score
+			}
+		});
+
+		// setTimeout(function () {
+		// 	QuizActions.getQuestion();
+		// }, 1000);
 	},
 
 	getQuestion: function() {
-		return 'later';
+		quiz.getQuestion();
+	},
+
+	resetQuiz: function () {
+		quiz.resetQuiz();
+		dispatcher.dispatch({
+			type: 'QUIZ_RESET',
+			payload: null
+		});
+	},
+
+	endQuiz: function () {
+		// quiz.end();
+
+		dispatcher.dispatch({
+			type: 'QUIZ_END',
+			payload: null
+		});
 	}
 
 };

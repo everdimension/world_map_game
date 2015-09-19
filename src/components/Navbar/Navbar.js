@@ -6,7 +6,6 @@ class Navbar extends React.Component {
 	// expect session info in props
 
 	render() {
-		console.log('props of navbar', this.props);
 		let loginElement = this.props.user ? null : <li><a href="#login">Login</a></li>;
 		let signupElement = this.props.user ? null : <li><a href="#">Signup</a></li>;
 
