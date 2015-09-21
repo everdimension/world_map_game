@@ -53,6 +53,16 @@ const QuizActions = {
 		});
 	},
 
+	toggleCountriesMode: function(show) {
+		quiz.toggleCountriesMode(show);
+		dispatcher.dispatch({
+			type: 'TOGGLE_COUNTRIES_MODE',
+			payload: {
+				show: quiz.settings.showCountries
+			}
+		});
+	},
+
 	startQuiz: function() {
 		console.log('startQuiz fn in ACtions');
 		quiz.on('question', QuizActions.dispatchQuestion);

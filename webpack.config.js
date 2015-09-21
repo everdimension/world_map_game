@@ -43,7 +43,7 @@ var config = {
 		loaders: [
 			{ test: /\.js$/, exclude: nodeModulesPath, loader: 'babel' },
 			{ test: /\.css$/, exclude: nodeModulesPath, loader: 'style!css' },
-			{ test: /\.less$/, loader: 'style!css!less'}
+			{ test: /\.less$/, loader: 'style!css!autoprefixer!less'}
 		]
 	},
 	plugins: [

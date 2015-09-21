@@ -1,0 +1,78 @@
+/* Made by Jimmy Gillam */
+@checked-color: #34b93d;
+@unchecked-color: #444;
+@checkbox-height: 20px;
+@background-color:#667788;
+@font-color:#efefef;
+@duration: .25s;
+
+/* Checkmark style starts */
+
+@keyframes dothabottomcheck{
+	0% { height: 0; }
+	100% { height: @checkbox-height/2;  }
+}
+
+@keyframes dothatopcheck{
+	0% { height: 0; }
+	50% { height: 0; }
+	100% { height: @checkbox-height * 1.1; }
+}
+
+.animated-checkbox {
+	display:none;
+}
+
+.check-box {
+	position: relative;
+	display: inline-block;
+	height: @checkbox-height;
+	width: @checkbox-height;
+	background-color: transparent;
+	border: @checkbox-height * .1 solid @unchecked-color;
+	border-radius: 0;
+	box-sizing: border-box;
+	transition: border-color ease @duration/2;
+	cursor:pointer;
+
+	&::before, &::after {
+		content: ' ';
+		position: absolute;
+		display: inline-block;
+		box-sizing: border-box;
+		height: 0;
+		width: @checkbox-height * .1;
+		background-color: @checked-color;
+		transform-origin: left top;
+		border-radius: 0;
+		transition: opacity ease .5;
+	}
+
+	&::before {
+		top: (@checkbox-height - 2) * .72;
+		left: @checkbox-height * .41;
+		// box-shadow: 0 0 0 @checkbox-height * .05 @background-color;
+		transform: rotate(-135deg);
+	}
+
+	&::after {
+		top:  (@checkbox-height - 5) * .37;
+		left: @checkbox-height * .05;
+		transform: rotate(-45deg);
+	}
+}
+
+input[type=checkbox]:checked + .check-box,
+.check-box.checked{
+	border-color:@checked-color;
+
+	&::after{
+		height: @checkbox-height * .5;
+		animation: dothabottomcheck @duration/2 ease 0s forwards;
+	}
+
+	&::before{
+		height: @checkbox-height * 1.2;
+		animation: dothatopcheck @duration ease 0s forwards;
+	}
+}

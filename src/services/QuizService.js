@@ -11,6 +11,9 @@ class CountryQuiz {
 		};
 		this.score = 0;
 		this.mistakes = 0;
+		this.settings = {
+			showCountries: false
+		};
 	}
 
 	on (action, callback) {
@@ -61,6 +64,10 @@ class CountryQuiz {
 		// }
 	}
 
+	toggleCountriesMode(show) {
+		this.settings.showCountries = show;
+	}
+
 	getMistakes() {
 		return this.mistakes;
 	}
@@ -74,7 +81,9 @@ class CountryQuiz {
 
 	scoreAnswer(correct) {
 
-		this.score += (+correct) * 100;
+		let scoreMultiplier = this.settings.showCountries ? 80 : 100;
+
+		this.score += (+correct) * scoreMultiplier;
 		if (!correct) {
 			++this.mistakes;
 		}

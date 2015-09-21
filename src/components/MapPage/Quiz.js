@@ -28,6 +28,10 @@ class Quiz extends React.Component {
 			'has-success': this.props.isCorrect
 		});
 
+		let countryLabelClasses = classNames({
+			'invisible': !this.props.showCountry && !this.props.checkingAnswer
+		});
+
 		let QuizWrapperClassess = classNames('Quiz__input-wrapper', {
 			'no-animation': this.props.checkingAnswer
 		});
@@ -42,7 +46,7 @@ class Quiz extends React.Component {
 					<div className="col-sm-6 col-sm-offset-3">
 						<form onSubmit={this.handleSubmit}>
 							<div className={formGroupClasses}>
-								<label htmlFor="quizInput">{this.props.question.translations.ru.common}</label>
+								<label htmlFor="quizInput" className={countryLabelClasses}>{this.props.question.translations.ru.common}</label>
 								<div className={QuizWrapperClassess}>
 									<input type="text" ref="quizInputRef" id="quizInput" value={inputValue} onChange={this.handleChange} disabled={this.props.checkingAnswer} className="form-control Quiz__input" placeholder="enter capital name..." />
 								</div>

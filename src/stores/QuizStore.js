@@ -10,6 +10,7 @@ class QuizStore extends EventEmitter {
 		this.isCorrect = null;
 		this.mistakes = 0;
 		this.scoreCount = 0;
+		this.showCountry = false;
 	}
 
 	setQuestion (question) {
@@ -52,6 +53,10 @@ class QuizStore extends EventEmitter {
 		this.quiz = quiz;
 	}
 
+	toggleCountriesMode(show) {
+		this.showCountry = show;
+	}
+
 	getState () {
 		return {
 			question: this.currentQuestion,
@@ -59,7 +64,8 @@ class QuizStore extends EventEmitter {
 			checkingAnswer: this.checkingAnswer,
 			isCorrect: this.isCorrect,
 			mistakes: this.mistakes,
-			scoreCount: this.scoreCount
+			scoreCount: this.scoreCount,
+			showCountry: this.showCountry
 		};
 	}
 
@@ -102,6 +108,9 @@ dispatcher.register(function (action) {
 		quizStore.endStore();
 	} else if (action.type === 'QUIZ_RESET') {
 		quizStore.resetScore();
+
+	} else if (action.type === 'TOGGLE_COUNTRIES_MODE') {
+		quizStore.toggleCountriesMode(action.payload.show);
 
 	} else {
 		// do nothing

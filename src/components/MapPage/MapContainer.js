@@ -17,6 +17,7 @@ class MapContainer extends React.Component {
 		this.onStoreChange = this.onStoreChange.bind(this);
 		this.handleAnswer = this.handleAnswer.bind(this);
 		this.startQuizzing = this.startQuizzing.bind(this);
+		this.toggleCountriesMode = this.toggleCountriesMode.bind(this);
 	}
 
 	componentDidMount() {
@@ -37,19 +38,33 @@ class MapContainer extends React.Component {
 		QuizStore.unlisten(this.onStoreChange);
 	}
 
+	componentDidUpdate() {
+		if (!this.state.question.country) {
+			React.findDOMNode(this.refs.startQuizBtn).focus();
+		}
+	}
+
 
 	render() {
 		console.log('state score', this.state);
 
+		let quizInProgress = this.state.question.country;
+
 		return (
 			<div>
 				<AmMap selectCountry={this.state.question} />
-				<QuizScore mistakes={this.state.mistakes} score={this.state.scoreCount} />
+				<QuizScore
+					mistakes={this.state.mistakes}
+					score={this.state.scoreCount}
+					quizInProgress={quizInProgress}
+					onCountryToggle={this.toggleCountriesMode}
+				/>
 				{
 					this.state.question.country ?
 					<Quiz
 						question={this.state.question}
 						checkingAnswer={this.state.checkingAnswer}
+						showCountry={this.state.showCountry}
 						currentAnswer={this.state.currentAnswer}
 						isCorrect={this.state.isCorrect}
 						onAnswer={this.handleAnswer}
@@ -58,7 +73,7 @@ class MapContainer extends React.Component {
 					<div className="container center-block text-center">
 						<form onSubmit={this.startQuizzing}>
 							<div className="form-group">
-								<button className="btn btn-primary">Start</button>
+								<button ref="startQuizBtn" className="btn btn-primary">Start</button>
 							</div>
 						</form>
 					</div>
@@ -105,6 +120,12 @@ class MapContainer extends React.Component {
 
 	updateCurrentAnswer(currentAnswer) {
 		QuizActions.updateCurrentAnswer(currentAnswer);
+	}
+
+	toggleCountriesMode() {
+		console.log('toggleCountriesMode fn in map container');
+		QuizActions.endQuiz();
+		QuizActions.toggleCountriesMode(!this.state.showCountry);
 	}
 
 	onStoreChange() {
