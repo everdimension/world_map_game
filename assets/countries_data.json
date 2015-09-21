@@ -706,7 +706,10 @@
     "capital": {
       "name": "Thimphu",
       "latitude": 27.4405,
-      "longitude": 89.673
+      "longitude": 89.673,
+      "translations": {
+        "ru": "Тхимпху"
+      }
     }
   },
   {
@@ -851,7 +854,14 @@
     "capital": {
       "name": "Bern",
       "latitude": 46.948,
-      "longitude": 7.4481
+      "longitude": 7.4481,
+      "translations": {
+        "ru": "Берн",
+        "fr": "Bern",
+        "es": "Bern",
+        "it": "Bern",
+        "de": "Bern"
+      }
     }
   },
   {
@@ -3095,7 +3105,14 @@
     "capital": {
       "name": "Ulan Bator",
       "latitude": 47.9138,
-      "longitude": 106.922
+      "longitude": 106.922,
+      "translations": {
+        "ru": "Улан-Батор",
+        "fr": "Oulan-Bator",
+        "es": "Ulán Bator",
+        "it": "Ulan Bator",
+        "de": "Ulaanbaatar"
+      }
     }
   },
   {
