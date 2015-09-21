@@ -18,7 +18,7 @@ var htmlWebpackPluginConfig = {
 if (isProduction) {
 	htmlWebpackPluginConfig.googleAnalytics = {
 		trackingId: 'UA-67832593-1',
-        pageViewOnLoad: true
+		pageViewOnLoad: true
 	};
 }
 
