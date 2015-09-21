@@ -2,7 +2,7 @@ var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-// var httpProxy = require('http-proxy');
+var httpProxy = require('http-proxy');
 var setRoutes = require('./app/routes');
 
 var isProduction = process.env.NODE_ENV === 'production';

@@ -6,7 +6,24 @@ var nodeModulesPath = path.join(__dirname, 'node_modules');
 var srcPath = path.join(__dirname, 'src');
 var buildPath = path.join(__dirname, 'build');
 
-var publicPath = process.env.NODE_ENV === 'production' ? '/' : '/build';
+var isProduction = process.env.NODE_ENV === 'production';
+var publicPath = isProduction ? '/' : '/build';
+
+var htmlWebpackPluginConfig = {
+	inject: true,
+	template: path.join(srcPath, 'index.html'),
+	title: 'Map App'
+};
+
+if (isProduction) {
+	htmlWebpackPluginConfig.googleAnalytics = {
+		trackingId: 'UA-67832593-1',
+        pageViewOnLoad: true
+	};
+}
+
+
+console.log('htmlWebpackPluginConfig', htmlWebpackPluginConfig.googleAnalytics);
 
 
 var config = {
@@ -31,10 +48,7 @@ var config = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new HtmlWebpackPlugin({
-			inject: true,
-			template: path.join(srcPath, 'index.html')
-		})
+		new HtmlWebpackPlugin(htmlWebpackPluginConfig)
 	],
 
 	debug: true,

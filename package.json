@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "start": "npm run build",
     "dev": "webpack-dev-server --progress",
     "build": "webpack --progress",
     "lint": "eslint src",
