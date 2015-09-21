@@ -51,7 +51,7 @@ class AmMap extends React.Component {
 	componentDidUpdate (prevProps) {
 
 		if (this.props.selectCountry.country_code !== prevProps.selectCountry.country_code) {
-			this.state.map.addLabel(this.props.selectCountry.capital);
+			this.state.map.addMarker(this.props.selectCountry.capital);
 			this.state.map.selectCountry(this.props.selectCountry.country_code);
 		}
 	}

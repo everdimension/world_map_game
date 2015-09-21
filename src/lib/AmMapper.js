@@ -38,34 +38,31 @@ class AmMapper {
 		this.map.selectObject(this.map.getObjectById(countryId));
 	}
 
-	addLabel(opts) {
-		// let lastObject = this.map.dataProvider.images[0];
-		// if (lastObject) {
-		// 	lastObject.deleteObject();
-		// }
+	addMarker(opts) {
 
-		return;
+		let imageSettings;
+		let currentZoom = map.zoomLevel();
+		let currentLat = map.zoomLatitude();
+		let currentLon = map.zoomLongitude();
 
-		let imageSettings = { latitude: 51.32423, longitude: 0, type: 'circle', color: '#ffffff', labelShiftY: 0, label: 'London' };
-		imageSettings.latitude = opts.latitude;
-		imageSettings.longitude = opts.longitude;
-		imageSettings.label = '';
-		imageSettings.id = 'capital';
+		this.map.dataProvider.images.length = 0;
 
-		let imageObject = new AmCharts.MapImage(imageSettings);
+		if (opts) {
+			imageSettings = { latitude: 51.32423, longitude: 0, type: 'circle', color: '#ffffff', labelShiftY: 0, label: 'London' };
+			imageSettings.latitude = opts.latitude;
+			imageSettings.longitude = opts.longitude;
+			imageSettings.width = 7;
+			imageSettings.height = 7;
+			imageSettings.label = '';
+			imageSettings.id = 'capital';
 
-		console.log('adding label');
-		this.map.dataProvider.images.push(imageObject);
-		// imageObject.validate();
-		let theImage = this.map.dataProvider.images[this.map.dataProvider.images.length - 1];
-		console.log(theImage);
-		// theImage.updatePosition();
-		// theImage.validate();
+			console.log('adding label');
+			this.map.dataProvider.images.push(imageSettings);
+		}
 
-
-		// this.map.validateData();
+		this.map.validateNow();
+		this.map.zoomToLongLat(currentZoom, currentLon, currentLat, true);
 	}
-
 }
 
 export default AmMapper;
