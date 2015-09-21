@@ -90,9 +90,11 @@ dispatcher.register(function (action) {
 		quizStore.setCurrentAnswer(action.payload.currentAnswer);
 
 	} else if (action.type === 'CHECKING_ANSWER') {
+		console.log('quizStore CHECKING_ANSWER');
 		quizStore.setCheckingAnswer(action.payload.checkingAnswer);
 
 	} else if (action.type === 'ANSWER') {
+		console.log('quizStore ANSWER');
 		quizStore.setAnswerValidity(action.payload.isCorrect);
 		quizStore.setScore(action.payload.score);
 

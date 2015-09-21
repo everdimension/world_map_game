@@ -36,18 +36,22 @@ class App extends React.Component {
 	render() {
 
 		// console.log('state of app', this.state);
+		console.log(this.props.children);
 		let appElement = null;
-		if (window.location.hash.substr(1) !== 'map') {
+		let navbarElement = null;
+		if (this.props.routeName !== 'map') {
 			appElement = (
 				<div className="container">
 					<h2>App is...</h2>
 					<p className="lead">Message: <i>{this.state.msg}</i></p>
 				</div>
 			);
+
+			navbarElement = ( <Navbar user={this.state.user} onLogout={this.handleLogout.bind(this)} /> );
 		}
 		return (
 			<div>
-				<Navbar user={this.state.user} onLogout={this.handleLogout.bind(this)} />
+				{navbarElement}
 				{appElement}
 				{this.props.children}
 			</div>

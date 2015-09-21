@@ -73,12 +73,12 @@ class MapContainer extends React.Component {
 		}
 		QuizActions.resetQuiz();
 		QuizActions.getQuestion();
-		this.state.questionTimeout = setTimeout(this.handleAnswer, 4000);
+		this.state.questionTimeout = setTimeout(this.handleAnswer, 5500);
 	}
 
 	getNewQuestion() {
 		QuizActions.getQuestion();
-		this.state.questionTimeout = setTimeout(this.handleAnswer, 5000);
+		this.state.questionTimeout = setTimeout(this.handleAnswer, 5500);
 	}
 
 	handleAnswer(answer) {
@@ -89,7 +89,9 @@ class MapContainer extends React.Component {
 		answer = answer || this.state.currentAnswer;
 		QuizActions.giveAnswer(answer);
 
-		if (this.state.mistakes >= 5) {
+		console.log('will give answer', this.state.mistakes);
+
+		if (QuizStore.getState().mistakes > 5) {
 			setTimeout(function () {
 				QuizActions.endQuiz();
 

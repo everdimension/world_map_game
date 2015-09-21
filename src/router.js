@@ -22,15 +22,15 @@ class Router {
 	}
 
 	onRouteChange() {
-		this.routeName = window.location.hash.substr(1);
-		let routeComponent = paths[this.routeName] || paths.home;
+		this.routeName = window.location.hash.substr(1) || 'map';
+		let routeComponent = paths[this.routeName] || home;
 
 		if (routeComponent.requiresLogin && !AuthStore.getState().isAuthenticated) {
 			console.warn('unauthorized!');
 			window.location.hash = 'login';
 
 		} else {
-			this.renderFn(routeComponent);
+			this.renderFn(routeComponent, this.routeName);
 		}
 
 	}

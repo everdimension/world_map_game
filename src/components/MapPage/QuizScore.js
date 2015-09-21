@@ -17,8 +17,10 @@ class QuizScore extends React.Component {
 				<span className="Score__bars">
 					{mistakes}
 				</span>
-				<br />
-				score: {this.props.score}
+
+				<div className="Score__score">
+					score: {this.props.score}
+				</div>
 			</div>
 		);
 	}

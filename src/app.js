@@ -7,11 +7,11 @@ AuthActions.auth();
 
 const root = document.getElementById('app-root');
 
-router.onChange(function(RouteComponent) {
+router.onChange(function(RouteComponent, routeName) {
 
 	React.render(
 		(
-			<App>
+			<App routeName={routeName}>
 				<RouteComponent />
 			</App>
 		),
