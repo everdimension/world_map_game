@@ -12,6 +12,11 @@ class Quiz extends React.Component {
 
 	componentDidMount() {
 		React.findDOMNode(this.refs.quizInputRef).focus();
+		document.addEventListener('keyup', this.listenBackspace);
+	}
+
+	componentWillUnmount() {
+		React.findDOMNode(this.refs.quizForm).removeEventListener('keyup', this.listenBackspace);
 	}
 
 	componentDidUpdate() {
@@ -44,7 +49,7 @@ class Quiz extends React.Component {
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-6 col-sm-offset-3">
-						<form onSubmit={this.handleSubmit}>
+						<form onSubmit={this.handleSubmit} ref="quizForm">
 							<div className={formGroupClasses}>
 								<label htmlFor="quizInput" className={countryLabelClasses}>{this.props.question.translations.ru.common}</label>
 								<div className={QuizWrapperClassess}>
@@ -56,6 +61,16 @@ class Quiz extends React.Component {
 				</div>
 			</div>
 		);
+	}
+
+	listenBackspace(evt) {
+		console.log('keyup on document', evt.keyCode);
+		let isBackspace = evt.keyCode === 8;
+		let isTextInput = ['text', 'email', 'tel', 'password', 'textarea'].indexOf(evt.srcElement.type) !== -1;
+		if (isBackspace && !isTextInput) {
+			console.log('stopping event', evt);
+			Event.stop(evt);
+		}
 	}
 
 	handleSubmit(evt) {

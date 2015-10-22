@@ -5000,5 +5000,1382 @@
         "de": "Pretoria"
       }
     }
+  },
+  {
+    "country": "Australia",
+    "translations": {
+      "ru": {
+        "official": "Содружество Австралии",
+        "common": "Австралия"
+      },
+      "de": {
+        "official": "Commonwealth of Australia",
+        "common": "Australien"
+      },
+      "fr": {
+        "official": "Commonwealth d'Australie",
+        "common": "Australie"
+      },
+      "it": {
+        "official": "Commonwealth of Australia",
+        "common": "Australia"
+      },
+      "es": {
+        "official": "Mancomunidad de Australia",
+        "common": "Australia"
+      }
+    },
+    "country_code": "AU",
+    "capital": {
+      "name": "Canberra",
+      "latitude": -35.30735,
+      "longitude": 149.19052,
+      "translations": {
+        "ru": "Канберра",
+        "fr": "Canberra",
+        "es": "Camberra",
+        "it": "Canberra",
+        "de": "Canberra"
+      }
+    }
+  },
+  {
+    "country": "Bahamas",
+    "translations": {
+      "ru": {
+        "official": "Содружество Багамских Островов",
+        "common": "Багамские Острова"
+      },
+      "de": {
+        "official": "Commonwealth der Bahamas",
+        "common": "Bahamas"
+      },
+      "fr": {
+        "official": "Commonwealth des Bahamas",
+        "common": "Bahamas"
+      },
+      "it": {
+        "official": "Commonwealth delle Bahamas",
+        "common": "Bahamas"
+      },
+      "es": {
+        "official": "Commonwealth de las Bahamas",
+        "common": "Bahamas"
+      }
+    },
+    "country_code": "BS",
+    "capital": {
+      "name": "Nassau",
+      "latitude": 25.06,
+      "longitude": -77.345,
+      "translations": {
+        "ru": "Нассау",
+        "fr": "Nassau",
+        "es": "Nassau",
+        "it": "Nassau",
+        "de": "Nassau"
+      }
+    }
+  },
+  {
+    "country": "Brazil",
+    "translations": {
+      "ru": {
+        "official": "Федеративная Республика Бразилия",
+        "common": "Бразилия"
+      },
+      "de": {
+        "official": "Föderativen Republik Brasilien",
+        "common": "Brasilien"
+      },
+      "fr": {
+        "official": "République fédérative du Brésil",
+        "common": "Brésil"
+      },
+      "it": {
+        "official": "Repubblica federativa del Brasile",
+        "common": "Brasile"
+      },
+      "es": {
+        "official": "República Federativa del Brasil",
+        "common": "Brasil"
+      }
+    },
+    "country_code": "BR",
+    "capital": {
+      "name": "Brasília",
+      "latitude": -15.869807,
+      "longitude": -47.921486,
+      "translations": {
+        "ru": "Бразилиа",
+        "fr": "Brasilia",
+        "es": "Brasilia",
+        "it": "Brasilia",
+        "de": "Brasília"
+      }
+    }
+  },
+  {
+    "country": "China",
+    "translations": {
+      "ru": {
+        "official": "Народная Республика Китай",
+        "common": "Китай"
+      },
+      "de": {
+        "official": "Volksrepublik China",
+        "common": "China"
+      },
+      "fr": {
+        "official": "République populaire de Chine",
+        "common": "Chine"
+      },
+      "it": {
+        "official": "Repubblica popolare cinese",
+        "common": "Cina"
+      },
+      "es": {
+        "official": "República Popular de China",
+        "common": "China"
+      }
+    },
+    "country_code": "CN",
+    "capital": {
+      "name": "Beijing",
+      "latitude": 39.904214,
+      "longitude": 116.407413,
+      "translations": {
+        "ru": "Пекин",
+        "fr": "Pékin",
+        "es": "Pekín",
+        "it": "Pechino",
+        "de": "Beijing"
+      }
+    }
+  },
+  {
+    "country": "Cameroon",
+    "translations": {
+      "ru": {
+        "official": "Республика Камерун",
+        "common": "Камерун"
+      },
+      "de": {
+        "official": "Republik Kamerun",
+        "common": "Kamerun"
+      },
+      "fr": {
+        "official": "République du Cameroun",
+        "common": "Cameroun"
+      },
+      "it": {
+        "official": "Repubblica del Camerun",
+        "common": "Camerun"
+      },
+      "es": {
+        "official": "República de Camerún",
+        "common": "Camerún"
+      }
+    },
+    "country_code": "CM",
+    "capital": {
+      "name": "Yaoundé",
+      "latitude": 3.8666667,
+      "longitude": 11.5166667,
+      "translations": {
+        "ru": "Яунде",
+        "de": "Yaoundé"
+      }
+    }
+  },
+  {
+    "country": "Republic of the Congo",
+    "translations": {
+      "ru": {
+        "official": "Республика Конго",
+        "common": "Республика Конго"
+      },
+      "de": {
+        "official": "Republik Kongo",
+        "common": "Kongo"
+      },
+      "fr": {
+        "official": "République du Congo",
+        "common": "Congo"
+      },
+      "it": {
+        "official": "Repubblica del Congo",
+        "common": "Congo"
+      },
+      "es": {
+        "official": "República del Congo",
+        "common": "Congo"
+      }
+    },
+    "country_code": "CG",
+    "capital": {
+      "name": "Brazzaville",
+      "latitude": -4.258899,
+      "longitude": 15.251139,
+      "translations": {
+        "ru": "Браззавиль",
+        "fr": "Brazzaville",
+        "es": "Brazzaville",
+        "it": "Brazzaville",
+        "de": "Brazzaville"
+      }
+    }
+  },
+  {
+    "country": "Colombia",
+    "translations": {
+      "ru": {
+        "official": "Республика Колумбия",
+        "common": "Колумбия"
+      },
+      "de": {
+        "official": "Republik Kolumbien",
+        "common": "Kolumbien"
+      },
+      "fr": {
+        "official": "République de Colombie",
+        "common": "Colombie"
+      },
+      "it": {
+        "official": "Repubblica di Colombia",
+        "common": "Colombia"
+      },
+      "es": {
+        "official": "República de Colombia",
+        "common": "Colombia"
+      }
+    },
+    "country_code": "CO",
+    "capital": {
+      "name": "Bogotá",
+      "latitude": 4.698602,
+      "longitude": -74.143135,
+      "translations": {
+        "ru": "Богота",
+        "fr": "Bogotá",
+        "es": "Bogotá",
+        "it": "Bogotá",
+        "de": "Bogotá"
+      }
+    }
+  },
+  {
+    "country": "Costa Rica",
+    "translations": {
+      "ru": {
+        "official": "Республика Коста-Рика",
+        "common": "Коста-Рика"
+      },
+      "de": {
+        "official": "Republik Costa Rica",
+        "common": "Costa Rica"
+      },
+      "fr": {
+        "official": "République du Costa Rica",
+        "common": "Costa Rica"
+      },
+      "it": {
+        "official": "Repubblica di Costa Rica",
+        "common": "Costa Rica"
+      },
+      "es": {
+        "official": "República de Costa Rica",
+        "common": "Costa Rica"
+      }
+    },
+    "country_code": "CR",
+    "capital": {
+      "name": "San José",
+      "latitude": 9.998238,
+      "longitude": -84.20408,
+      "translations": {
+        "ru": "Сан-Хосе",
+        "fr": "San José",
+        "es": "San José",
+        "it": "San José",
+        "de": "San José"
+      }
+    }
+  },
+  {
+    "country": "Western Sahara",
+    "translations": {
+      "ru": {
+        "official": "Sahrawi Арабская Демократическая Республика",
+        "common": "Западная Сахара"
+      },
+      "de": {
+        "official": "Demokratische Arabische Republik Sahara",
+        "common": "Westsahara"
+      },
+      "fr": {
+        "official": "République arabe sahraouie démocratique",
+        "common": "Sahara Occidental"
+      },
+      "it": {
+        "official": "Repubblica Araba Saharawi Democratica",
+        "common": "Sahara Occidentale"
+      },
+      "es": {
+        "official": "República Árabe Saharaui Democrática",
+        "common": "Sahara Occidental"
+      }
+    },
+    "country_code": "EH",
+    "capital": {
+      "name": "El Aaiún",
+      "latitude": 27.133333,
+      "longitude": -13.216667,
+      "translations": {
+        "ru": "Эль-Аюн"
+      }
+    }
+  },
+  {
+    "country": "Ethiopia",
+    "translations": {
+      "ru": {
+        "official": "Федеративная Демократическая Республика Эфиопия",
+        "common": "Эфиопия"
+      },
+      "de": {
+        "official": "Demokratischen Bundesrepublik Äthiopien",
+        "common": "Äthiopien"
+      },
+      "fr": {
+        "official": "République fédérale démocratique d'Éthiopie",
+        "common": "Éthiopie"
+      },
+      "it": {
+        "official": "Repubblica federale democratica di Etiopia",
+        "common": "Etiopia"
+      },
+      "es": {
+        "official": "República Democrática Federal de Etiopía",
+        "common": "Etiopía"
+      }
+    },
+    "country_code": "ET",
+    "capital": {
+      "name": "Addis Ababa",
+      "latitude": 8.983759,
+      "longitude": 38.7959,
+      "translations": {
+        "ru": "Аддис-Абеба",
+        "fr": "Addis Abeba",
+        "es": "Addis Abeba",
+        "it": "Addis Abeba",
+        "de": "Addis Abeba"
+      }
+    }
+  },
+  {
+    "country": "Fiji",
+    "translations": {
+      "ru": {
+        "official": "Республика Фиджи",
+        "common": "Фиджи"
+      },
+      "de": {
+        "official": "Republik Fidschi",
+        "common": "Fidschi"
+      },
+      "fr": {
+        "official": "République des Fidji",
+        "common": "Fidji"
+      },
+      "it": {
+        "official": "Repubblica di Figi",
+        "common": "Figi"
+      },
+      "es": {
+        "official": "República de Fiji",
+        "common": "Fiyi"
+      }
+    },
+    "country_code": "FJ",
+    "capital": {
+      "name": "Suva",
+      "latitude": -18.045885,
+      "longitude": 178.55981,
+      "translations": {
+        "ru": "Сува",
+        "fr": "Suva",
+        "es": "Suva",
+        "it": "Suva",
+        "de": "Suva"
+      }
+    }
+  },
+  {
+    "country": "Georgia",
+    "translations": {
+      "ru": {
+        "official": "Грузия",
+        "common": "Грузия"
+      },
+      "de": {
+        "official": "Georgia",
+        "common": "Georgien"
+      },
+      "fr": {
+        "official": "Géorgie",
+        "common": "Géorgie"
+      },
+      "it": {
+        "official": "Georgia",
+        "common": "Georgia"
+      },
+      "es": {
+        "official": "Georgia",
+        "common": "Georgia"
+      }
+    },
+    "country_code": "GE",
+    "capital": {
+      "name": "Tbilisi",
+      "latitude": 41.674065,
+      "longitude": 44.958958,
+      "translations": {
+        "ru": "Тбилиси",
+        "fr": "Tbilissi",
+        "es": "Tiflis",
+        "it": "Tbilisi",
+        "de": "Tiflis"
+      }
+    }
+  },
+  {
+    "country": "Equatorial Guinea",
+    "translations": {
+      "ru": {
+        "official": "Республика Экваториальная Гвинея",
+        "common": "Экваториальная Гвинея"
+      },
+      "de": {
+        "official": "Republik Äquatorialguinea",
+        "common": "Äquatorial-Guinea"
+      },
+      "fr": {
+        "official": "République de Guinée équatoriale",
+        "common": "Guinée-Équatoriale"
+      },
+      "it": {
+        "official": "Repubblica della Guinea Equatoriale",
+        "common": "Guinea Equatoriale"
+      },
+      "es": {
+        "official": "República de Guinea Ecuatorial",
+        "common": "Guinea Ecuatorial"
+      }
+    },
+    "country_code": "GQ",
+    "capital": {
+      "name": "Malabo",
+      "latitude": 3.757791,
+      "longitude": 8.716096,
+      "translations": {
+        "ru": "Малабо",
+        "fr": "Malabo",
+        "es": "Santa Isabel",
+        "it": "Malabo",
+        "de": "Malabo"
+      }
+    }
+  },
+  {
+    "country": "Guyana",
+    "translations": {
+      "ru": {
+        "official": "Кооперативная Республика Гайана",
+        "common": "Гайана"
+      },
+      "de": {
+        "official": "Kooperative Republik Guyana",
+        "common": "Guyana"
+      },
+      "fr": {
+        "official": "République coopérative du Guyana",
+        "common": "Guyane"
+      },
+      "it": {
+        "official": "Co -operative Republic of Guyana",
+        "common": "Guyana"
+      },
+      "es": {
+        "official": "República Cooperativa de Guyana",
+        "common": "Guyana"
+      }
+    },
+    "country_code": "GY",
+    "capital": {
+      "name": "Georgetown",
+      "latitude": 6.503833,
+      "longitude": -58.25308,
+      "translations": {
+        "ru": "Джорджтаун",
+        "fr": "Georgetown",
+        "es": "Georgetown",
+        "it": "Georgetown",
+        "de": "Georgetown"
+      }
+    }
+  },
+  {
+    "country": "Honduras",
+    "translations": {
+      "ru": {
+        "official": "Республика Гондурас",
+        "common": "Гондурас"
+      },
+      "de": {
+        "official": "Republik Honduras",
+        "common": "Honduras"
+      },
+      "fr": {
+        "official": "République du Honduras",
+        "common": "Honduras"
+      },
+      "it": {
+        "official": "Repubblica di Honduras",
+        "common": "Honduras"
+      },
+      "es": {
+        "official": "República de Honduras",
+        "common": "Honduras"
+      }
+    },
+    "country_code": "HN",
+    "capital": {
+      "name": "Tegucigalpa",
+      "latitude": 14.060123,
+      "longitude": -87.21972,
+      "translations": {
+        "ru": "Тегусигальпа",
+        "fr": "Tegucigalpa",
+        "es": "Tegucigalpa",
+        "it": "Tegucigalpa",
+        "de": "Tegucigalpa"
+      }
+    }
+  },
+  {
+    "country": "Haiti",
+    "translations": {
+      "ru": {
+        "official": "Республика Гаити",
+        "common": "Гаити"
+      },
+      "de": {
+        "official": "Republik Haiti",
+        "common": "Haiti"
+      },
+      "fr": {
+        "official": "République d'Haïti",
+        "common": "Haïti"
+      },
+      "it": {
+        "official": "Repubblica di Haiti",
+        "common": "Haiti"
+      },
+      "es": {
+        "official": "República de Haití",
+        "common": "Haiti"
+      }
+    },
+    "country_code": "HT",
+    "capital": {
+      "name": "Port-au-Prince",
+      "latitude": 18.575394,
+      "longitude": -72.29471,
+      "translations": {
+        "ru": "Порт-о-Пренс",
+        "fr": "Port Au Prince",
+        "es": "Port Au Prince",
+        "it": "Port Au Prince",
+        "de": "Port Au Prince"
+      }
+    }
+  },
+  {
+    "country": "Indonesia",
+    "translations": {
+      "ru": {
+        "official": "Республика Индонезия",
+        "common": "Индонезия"
+      },
+      "de": {
+        "official": "Republik Indonesien",
+        "common": "Indonesien"
+      },
+      "fr": {
+        "official": "République d'Indonésie",
+        "common": "Indonésie"
+      },
+      "it": {
+        "official": "Repubblica di Indonesia",
+        "common": "Indonesia"
+      },
+      "es": {
+        "official": "República de Indonesia",
+        "common": "Indonesia"
+      }
+    },
+    "country_code": "ID",
+    "capital": {
+      "name": "Jakarta",
+      "latitude": -6.211544,
+      "longitude": 106.845172,
+      "translations": {
+        "ru": "Джакарта",
+        "fr": "Jakarta",
+        "es": "Yakarta",
+        "it": "Giakarta",
+        "de": "Jakarta"
+      }
+    }
+  },
+  {
+    "country": "Iran",
+    "translations": {
+      "ru": {
+        "official": "Исламская Республика Иран",
+        "common": "Иран"
+      },
+      "de": {
+        "official": "Islamischen Republik Iran",
+        "common": "Iran"
+      },
+      "fr": {
+        "official": "République islamique d'Iran",
+        "common": "Iran"
+      },
+      "es": {
+        "official": "República Islámica de Irán",
+        "common": "Iran"
+      }
+    },
+    "country_code": "IR",
+    "capital": {
+      "name": "Tehran",
+      "latitude": 35.6961111,
+      "longitude": 51.4230556,
+      "translations": {
+        "ru": "Тегеран",
+        "de": "Teheran"
+      }
+    }
+  },
+  {
+    "country": "Jamaica",
+    "translations": {
+      "ru": {
+        "official": "Ямайка",
+        "common": "Ямайка"
+      },
+      "de": {
+        "official": "Jamaika",
+        "common": "Jamaika"
+      },
+      "fr": {
+        "official": "Jamaïque",
+        "common": "Jamaïque"
+      },
+      "it": {
+        "official": "Giamaica",
+        "common": "Giamaica"
+      },
+      "es": {
+        "official": "Jamaica",
+        "common": "Jamaica"
+      }
+    },
+    "country_code": "JM",
+    "capital": {
+      "name": "Kingston",
+      "latitude": 17.992731,
+      "longitude": -76.792009,
+      "translations": {
+        "ru": "Кингстон",
+        "fr": "Kingston",
+        "es": "Kingston",
+        "it": "Kingston",
+        "de": "Kingston"
+      }
+    }
+  },
+  {
+    "country": "Lebanon",
+    "translations": {
+      "ru": {
+        "official": "Ливанская Республика",
+        "common": "Ливан"
+      },
+      "de": {
+        "official": "libanesischen Republik",
+        "common": "Libanon"
+      },
+      "fr": {
+        "official": "République libanais",
+        "common": "Liban"
+      },
+      "it": {
+        "official": "Repubblica libanese",
+        "common": "Libano"
+      },
+      "es": {
+        "official": "República Libanesa",
+        "common": "Líbano"
+      }
+    },
+    "country_code": "LB",
+    "capital": {
+      "name": "Beirut",
+      "latitude": 33.826073,
+      "longitude": 35.49308,
+      "translations": {
+        "ru": "Бейрут",
+        "fr": "Beyrouth",
+        "es": "Beirut",
+        "it": "Beirut",
+        "de": "Beirut"
+      }
+    }
+  },
+  {
+    "country": "Moldova",
+    "translations": {
+      "ru": {
+        "official": "Молдова",
+        "common": "Молдавия"
+      },
+      "de": {
+        "official": "Republik Moldau",
+        "common": "Moldawie"
+      },
+      "fr": {
+        "official": "République de Moldova",
+        "common": "Moldavie"
+      },
+      "it": {
+        "official": "Repubblica di Moldova",
+        "common": "Moldavia"
+      },
+      "es": {
+        "official": "República de Moldova",
+        "common": "Moldavia"
+      }
+    },
+    "country_code": "MD",
+    "capital": {
+      "name": "Chișinău",
+      "latitude": 46.935444,
+      "longitude": 28.934967,
+      "translations": {
+        "ru": "Кишинёв",
+        "fr": "Chişinău",
+        "es": "Chişinău",
+        "it": "Chişinău",
+        "de": "Chișinău"
+      }
+    }
+  },
+  {
+    "country": "Mexico",
+    "translations": {
+      "ru": {
+        "official": "Мексиканских Соединенных Штатов",
+        "common": "Мексика"
+      },
+      "de": {
+        "official": "Vereinigten Mexikanischen Staaten",
+        "common": "Mexiko"
+      },
+      "fr": {
+        "official": "États-Unis mexicains",
+        "common": "Mexique"
+      },
+      "it": {
+        "official": "Stati Uniti del Messico",
+        "common": "Messico"
+      },
+      "es": {
+        "official": "Estados Unidos Mexicanos",
+        "common": "México"
+      }
+    },
+    "country_code": "MX",
+    "capital": {
+      "name": "Mexico City",
+      "latitude": 19.4270499,
+      "longitude": -99.1275711,
+      "translations": {
+        "ru": "Мехико",
+        "fr": "Mexico",
+        "es": "Ciudad de México",
+        "it": "Città del Messico",
+        "de": "Mexiko-Stadt"
+      }
+    }
+  },
+  {
+    "country": "Myanmar",
+    "translations": {
+      "ru": {
+        "official": "Республика Союза Мьянма",
+        "common": "Мьянма"
+      },
+      "de": {
+        "official": "Republik der Union von Myanmar",
+        "common": "Myanmar"
+      },
+      "fr": {
+        "official": "République de l'Union du Myanmar",
+        "common": "Myanmar"
+      },
+      "it": {
+        "official": "Repubblica dell'Unione di Myanmar",
+        "common": "Birmania"
+      },
+      "es": {
+        "official": "República de la Unión de Myanmar",
+        "common": "Myanmar"
+      }
+    },
+    "country_code": "MM",
+    "capital": {
+      "name": "Naypyidaw",
+      "latitude": 19.6225,
+      "longitude": 96.201385,
+      "translations": {
+        "ru": "Нейпьидо"
+      }
+    }
+  },
+  {
+    "country": "New Zealand",
+    "translations": {
+      "ru": {
+        "official": "Новая Зеландия",
+        "common": "Новая Зеландия"
+      },
+      "de": {
+        "official": "Neuseeland",
+        "common": "Neuseeland"
+      },
+      "fr": {
+        "official": "Nouvelle-Zélande",
+        "common": "Nouvelle-Zélande"
+      },
+      "it": {
+        "official": "Nuova Zelanda",
+        "common": "Nuova Zelanda"
+      },
+      "es": {
+        "official": "nueva Zelanda",
+        "common": "Nueva Zelanda"
+      }
+    },
+    "country_code": "NZ",
+    "capital": {
+      "name": "Wellington",
+      "latitude": -41.329037,
+      "longitude": 174.81216,
+      "translations": {
+        "ru": "Веллингтон",
+        "fr": "Wellington",
+        "es": "Wellington",
+        "it": "Wellington",
+        "de": "Wellington"
+      }
+    }
+  },
+  {
+    "country": "Papua New Guinea",
+    "translations": {
+      "ru": {
+        "official": "Независимое Государство Папуа-Новой Гвинеи",
+        "common": "Папуа — Новая Гвинея"
+      },
+      "de": {
+        "official": "Unabhängige Staat Papua-Neuguinea",
+        "common": "Papua-Neuguinea"
+      },
+      "fr": {
+        "official": "État indépendant de Papouasie- Nouvelle-Guinée",
+        "common": "Papouasie-Nouvelle-Guinée"
+      },
+      "it": {
+        "official": "Stato indipendente di Papua Nuova Guinea",
+        "common": "Papua Nuova Guinea"
+      },
+      "es": {
+        "official": "Estado Independiente de Papúa Nueva Guinea",
+        "common": "Papúa Nueva Guinea"
+      }
+    },
+    "country_code": "PG",
+    "capital": {
+      "name": "Port Moresby",
+      "latitude": -9.444308,
+      "longitude": 147.21446,
+      "translations": {
+        "ru": "Порт-Морсби",
+        "fr": "Port Moresby",
+        "es": "Port Moresby",
+        "it": "Port Moresby",
+        "de": "Port Moresby"
+      }
+    }
+  },
+  {
+    "country": "North Korea",
+    "translations": {
+      "ru": {
+        "official": "Корейская Народно-Демократическая Республика Корея",
+        "common": "Северная Корея"
+      },
+      "de": {
+        "official": "Demokratische Volksrepublik Korea",
+        "common": "Nordkorea"
+      },
+      "fr": {
+        "official": "République populaire démocratique de Corée",
+        "common": "Corée du Nord"
+      },
+      "it": {
+        "official": "Repubblica democratica popolare di Corea",
+        "common": "Corea del Nord"
+      },
+      "es": {
+        "official": "República Popular Democrática de Corea",
+        "common": "Corea del Norte"
+      }
+    },
+    "country_code": "KP",
+    "capital": {
+      "name": "Pyongyang",
+      "latitude": 39.2,
+      "longitude": 125.666664,
+      "translations": {
+        "ru": "Пхеньян",
+        "fr": "Pyongyang",
+        "es": "Pyongyang",
+        "it": "Pyongyang",
+        "de": "Pyongyang"
+      }
+    }
+  },
+  {
+    "country": "Paraguay",
+    "translations": {
+      "ru": {
+        "official": "Республика Парагвай",
+        "common": "Парагвай"
+      },
+      "de": {
+        "official": "Republik Paraguay",
+        "common": "Paraguay"
+      },
+      "fr": {
+        "official": "République du Paraguay",
+        "common": "Paraguay"
+      },
+      "it": {
+        "official": "Repubblica del Paraguay",
+        "common": "Paraguay"
+      },
+      "es": {
+        "official": "República de Paraguay",
+        "common": "Paraguay"
+      }
+    },
+    "country_code": "PY",
+    "capital": {
+      "name": "Asunción",
+      "latitude": -25.241795,
+      "longitude": -57.513794,
+      "translations": {
+        "ru": "Асунсьон",
+        "fr": "Asunción",
+        "es": "Asunción",
+        "it": "Asunción",
+        "de": "Asunción"
+      }
+    }
+  },
+  {
+    "country": "Sudan",
+    "translations": {
+      "ru": {
+        "official": "Республика Судан",
+        "common": "Судан"
+      },
+      "de": {
+        "official": "Republik Sudan",
+        "common": "Sudan"
+      },
+      "fr": {
+        "official": "République du Soudan",
+        "common": "Soudan"
+      },
+      "it": {
+        "official": "Repubblica del Sudan",
+        "common": "Sudan"
+      },
+      "es": {
+        "official": "República de Sudán",
+        "common": "Sudán"
+      }
+    },
+    "country_code": "SD",
+    "capital": {
+      "name": "Khartoum",
+      "latitude": 15.592217,
+      "longitude": 32.549698,
+      "translations": {
+        "ru": "Хартум",
+        "de": "Khartum"
+      }
+    }
+  },
+  {
+    "country": "Solomon Islands",
+    "translations": {
+      "ru": {
+        "official": "Соломоновы острова",
+        "common": "Соломоновы Острова"
+      },
+      "de": {
+        "official": "Salomon-Inseln",
+        "common": "Salomonen"
+      },
+      "fr": {
+        "official": "Iles Salomon",
+        "common": "Îles Salomon"
+      },
+      "it": {
+        "official": "Isole Salomone",
+        "common": "Isole Salomone"
+      },
+      "es": {
+        "official": "islas Salomón",
+        "common": "Islas Salomón"
+      }
+    },
+    "country_code": "SB",
+    "capital": {
+      "name": "Honiara",
+      "latitude": -9.428592,
+      "longitude": 160.04819,
+      "translations": {
+        "ru": "Хониара",
+        "fr": "Honiara",
+        "es": "Honiara",
+        "it": "Honiara",
+        "de": "Honiara"
+      }
+    }
+  },
+  {
+    "country": "South Sudan",
+    "translations": {
+      "ru": {
+        "official": "Республика Южный Судан",
+        "common": "Южный Судан"
+      },
+      "de": {
+        "official": "Republik Südsudan",
+        "common": "Südsudan"
+      },
+      "fr": {
+        "official": "République du Soudan du Sud",
+        "common": "Soudan du Sud"
+      },
+      "it": {
+        "official": "Repubblica del Sudan del Sud",
+        "common": "Sudan del sud"
+      },
+      "es": {
+        "official": "República de Sudán del Sur",
+        "common": "Sudán del Sur"
+      }
+    },
+    "country_code": "SS",
+    "capital": {
+      "name": "Juba",
+      "latitude": 4.866198,
+      "longitude": 31.601692,
+      "translations": {
+        "ru": "Джуба",
+        "fr": "Juba",
+        "es": "Juba",
+        "it": "Juba",
+        "de": "Juba"
+      }
+    }
+  },
+  {
+    "country": "Swaziland",
+    "translations": {
+      "ru": {
+        "official": "Королевство Свазиленд",
+        "common": "Свазиленд"
+      },
+      "de": {
+        "official": "Königreich Swasiland",
+        "common": "Swasiland"
+      },
+      "fr": {
+        "official": "Royaume du Swaziland",
+        "common": "Swaziland"
+      },
+      "it": {
+        "official": "Regno dello Swaziland",
+        "common": "Swaziland"
+      },
+      "es": {
+        "official": "Reino de Swazilandia",
+        "common": "Suazilandia"
+      }
+    },
+    "country_code": "SZ",
+    "capital": {
+      "name": "Lobamba",
+      "latitude": 31.133333,
+      "longitude": -26.316667,
+      "translations": {
+        "ru": "Мбабане"
+      }
+    }
+  },
+  {
+    "country": "Chad",
+    "translations": {
+      "ru": {
+        "official": "Республика Чад",
+        "common": "Чад"
+      },
+      "de": {
+        "official": "Republik Tschad",
+        "common": "Tschad"
+      },
+      "fr": {
+        "official": "République du Tchad",
+        "common": "Tchad"
+      },
+      "it": {
+        "official": "Repubblica del Ciad",
+        "common": "Ciad"
+      },
+      "es": {
+        "official": "República de Chad",
+        "common": "Chad"
+      }
+    },
+    "country_code": "TD",
+    "capital": {
+      "name": "N'Djamena",
+      "latitude": 12.129056,
+      "longitude": 15.034215,
+      "translations": {
+        "ru": "Нджамена",
+        "fr": "Ndjamena",
+        "es": "Yamena",
+        "it": "N'Djamena",
+        "de": "N'Djamena"
+      }
+    }
+  },
+  {
+    "country": "Togo",
+    "translations": {
+      "ru": {
+        "official": "Того Республика",
+        "common": "Того"
+      },
+      "de": {
+        "official": "Republik Togo",
+        "common": "Togo"
+      },
+      "fr": {
+        "official": "République togolaise",
+        "common": "Togo"
+      },
+      "it": {
+        "official": "Repubblica del Togo",
+        "common": "Togo"
+      },
+      "es": {
+        "official": "República de Togo",
+        "common": "Togo"
+      }
+    },
+    "country_code": "TG",
+    "capital": {
+      "name": "Lomé",
+      "latitude": 6.167103,
+      "longitude": 1.250347,
+      "translations": {
+        "ru": "Ломе",
+        "fr": "Lomé",
+        "es": "Lomé",
+        "it": "Lomé",
+        "de": "Lomé"
+      }
+    }
+  },
+  {
+    "country": "Uganda",
+    "translations": {
+      "ru": {
+        "official": "Республика Уганда",
+        "common": "Уганда"
+      },
+      "de": {
+        "official": "Republik Uganda",
+        "common": "Uganda"
+      },
+      "fr": {
+        "official": "République de l'Ouganda",
+        "common": "Uganda"
+      },
+      "it": {
+        "official": "Repubblica di Uganda",
+        "common": "Uganda"
+      },
+      "es": {
+        "official": "República de Uganda",
+        "common": "Uganda"
+      }
+    },
+    "country_code": "UG",
+    "capital": {
+      "name": "Kampala",
+      "latitude": 32.581111,
+      "longitude": 0.313611,
+      "translations": {
+        "ru": "Кампала"
+      }
+    }
+  },
+  {
+    "country": "Yemen",
+    "translations": {
+      "ru": {
+        "official": "Йеменская Республика",
+        "common": "Йемен"
+      },
+      "de": {
+        "official": "Republik Jemen",
+        "common": "Jemen"
+      },
+      "fr": {
+        "official": "République du Yémen",
+        "common": "Yémen"
+      },
+      "it": {
+        "official": "Repubblica dello Yemen",
+        "common": "Yemen"
+      },
+      "es": {
+        "official": "República de Yemen",
+        "common": "Yemen"
+      }
+    },
+    "country_code": "YE",
+    "capital": {
+      "name": "Sana'a",
+      "latitude": 15.473598,
+      "longitude": 44.22511,
+      "translations": {
+        "ru": "Сана",
+        "fr": "Sanaa",
+        "es": "Saná",
+        "it": "San'a",
+        "de": "Sana'a"
+      }
+    }
+  },
+  {
+    "country": "Zambia",
+    "translations": {
+      "ru": {
+        "official": "Республика Замбия",
+        "common": "Замбия"
+      },
+      "de": {
+        "official": "Republik Sambia",
+        "common": "Sambia"
+      },
+      "fr": {
+        "official": "République de Zambie",
+        "common": "Zambie"
+      },
+      "it": {
+        "official": "Repubblica di Zambia",
+        "common": "Zambia"
+      },
+      "es": {
+        "official": "República de Zambia",
+        "common": "Zambia"
+      }
+    },
+    "country_code": "ZM",
+    "capital": {
+      "name": "Lusaka",
+      "latitude": -15.325017,
+      "longitude": 28.445747,
+      "translations": {
+        "ru": "Лусака",
+        "fr": "Lusaka",
+        "es": "Lusaka",
+        "it": "Lusaka",
+        "de": "Lusaka"
+      }
+    }
+  },
+  {
+    "country": "Zimbabwe",
+    "translations": {
+      "ru": {
+        "official": "Республика Зимбабве",
+        "common": "Зимбабве"
+      },
+      "de": {
+        "official": "Republik Simbabwe",
+        "common": "Simbabwe"
+      },
+      "fr": {
+        "official": "République du Zimbabwe",
+        "common": "Zimbabwe"
+      },
+      "it": {
+        "official": "Repubblica dello Zimbabwe",
+        "common": "Zimbabwe"
+      },
+      "es": {
+        "official": "República de Zimbabwe",
+        "common": "Zimbabue"
+      }
+    },
+    "country_code": "ZW",
+    "capital": {
+      "name": "Harare",
+      "latitude": -17.91863,
+      "longitude": 31.099249,
+      "translations": {
+        "ru": "Хараре",
+        "fr": "Harare",
+        "es": "Harare",
+        "it": "Harare",
+        "de": "Harare"
+      }
+    }
   }
 ]

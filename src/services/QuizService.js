@@ -1,3 +1,5 @@
+
+let testIndex = 128;
 class CountryQuiz {
 	constructor(opts) {
 		this.type = opts.type;
@@ -27,6 +29,7 @@ class CountryQuiz {
 	getQuestion() {
 		let index = Math.floor(Math.random() * this.countries.length);
 		this.currentQuestion = this.countries[index];
+		// this.currentQuestion = this.countries[testIndex++];
 
 		this.callbacks.question.forEach((callback) => {
 			callback.call(null, this.currentQuestion);
@@ -43,7 +46,7 @@ class CountryQuiz {
 	}
 
 	giveAnswer(answer) {
-		answer = answer.toLowerCase();
+		answer = answer.trim().toLowerCase();
 		let actual = this.currentQuestion.capital.name.toLowerCase();
 		let actualRU = this.currentQuestion.capital.translations.ru.toLowerCase();
 
