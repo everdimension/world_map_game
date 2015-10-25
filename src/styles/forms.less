@@ -2,4 +2,11 @@
 
 .form-control {
 	letter-spacing: 1px;
+	&.disabled {
+		opacity: .9;
+		&, &:focus, &:active {
+			box-shadow: none;
+			outline: none;
+		}
+	}
 }

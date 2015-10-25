@@ -41,6 +41,10 @@ class Quiz extends React.Component {
 			'no-animation': this.props.checkingAnswer
 		});
 
+		let InputClasses = classNames('form-control', 'Quiz__input', {
+			'disabled': this.props.checkingAnswer
+		});
+
 		let capitalName = this.props.question.capital.translations.ru;
 
 		let inputValue = this.props.checkingAnswer ? capitalName : this.props.currentAnswer;
@@ -53,7 +57,7 @@ class Quiz extends React.Component {
 							<div className={formGroupClasses}>
 								<label htmlFor="quizInput" className={countryLabelClasses}>{this.props.question.translations.ru.common}</label>
 								<div className={QuizWrapperClassess}>
-									<input type="text" ref="quizInputRef" id="quizInput" value={inputValue} onChange={this.handleChange} disabled={this.props.checkingAnswer} className="form-control Quiz__input" placeholder="enter capital name..." />
+									<input type="text" ref="quizInputRef" id="quizInput" value={inputValue} onChange={this.handleChange} className={InputClasses} placeholder="enter capital name..." />
 								</div>
 							</div>
 						</form>

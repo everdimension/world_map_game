@@ -22,6 +22,7 @@ class MapContainer extends React.Component {
 
 	componentDidMount() {
 		window.QuizActions = QuizActions;
+		window.MapContainer = this;
 		let self = this;
 
 		QuizActions.fetchCountries()
@@ -94,6 +95,10 @@ class MapContainer extends React.Component {
 	getNewQuestion() {
 		QuizActions.getQuestion();
 		this.state.questionTimeout = setTimeout(this.handleAnswer, 5500);
+	}
+
+	pauseQuiz() {
+		clearTimeout(this.state.questionTimeout);
 	}
 
 	handleAnswer(answer) {
