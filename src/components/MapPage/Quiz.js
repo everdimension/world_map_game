@@ -79,6 +79,9 @@ class Quiz extends React.Component {
 
 	handleSubmit(evt) {
 		evt.preventDefault();
+		if (this.props.checkingAnswer) {
+			return;
+		}
 		this.submitAnswer();
 	}
 
