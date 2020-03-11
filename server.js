@@ -3,14 +3,14 @@ var express = require('express');
 var logger = require('morgan');
 var httpProxy = require('http-proxy');
 var mongoose = require('mongoose');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+var uuidv4  = require('uuid').v4;
 var config = require('dotenv').config().parsed;
 var setRoutes = require('./app/routes');
 
 var isProduction = process.env.NODE_ENV === 'production';
 console.log('isProduction', isProduction);
-
-// require userSchema, itemSchema
-// ------------------------------
 
 var db_username = config.DB_ADMIN_LOGIN || 'username';
 var db_password = config.DB_ADMIN_PASSWORD || 'password';
@@ -23,11 +23,18 @@ mongoose.connect(db_address, { useNewUrlParser: true, useCreateIndex: true, useU
 var app = express();
 
 // app.set('port', config.PORT || 3100);
+
+app.use(session({
+	secret: uuidv4(),
+	saveUninitialized: false,
+	resave: false,
+	store: new MongoStore({ mongooseConnection: mongoose.connection }),
+}));
+
 app.use(logger('dev'));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'build')));
-
 app.use(express.static(path.join(__dirname, 'assets')));
 
 setRoutes(app);

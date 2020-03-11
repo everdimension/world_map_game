@@ -39,6 +39,7 @@ function createJwtToken(user) {
 
 var setRoutes = function(app) {
 	app.get('/api/test', function (req, res, next) {
+		if (!req.session.user) return res.sendStatus(401);
 		return res.send('answer from server');
 	});
 
