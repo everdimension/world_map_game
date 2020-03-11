@@ -1,8 +1,9 @@
 var path = require('path');
 var express = require('express');
-var bodyParser = require('body-parser');
 var logger = require('morgan');
 var httpProxy = require('http-proxy');
+var mongoose = require('mongoose');
+var config = require('dotenv').config().parsed;
 var setRoutes = require('./app/routes');
 
 var isProduction = process.env.NODE_ENV === 'production';
@@ -11,25 +12,25 @@ console.log('isProduction', isProduction);
 // require userSchema, itemSchema
 // ------------------------------
 
-// var db_username = process.env.NODE_STORE_REACT_USER || 'username';
-// var db_password = process.env.NODE_STORE_REACT_PASS || 'password';
-//
-// var db_address = 'mongodb://' + db_username + ':' + db_password + '@apollo.modulusmongo.net:27017/waG9ybam';
-//
-// mongoose.connect(db_address);
+var db_username = config.DB_ADMIN_LOGIN || 'username';
+var db_password = config.DB_ADMIN_PASSWORD || 'password';
+var db_address = 'mongodb://' + db_username + ':' + db_password + config.DB_URL;
+
+mongoose.connect(db_address, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+	.then(() => console.log('connected to DB'))
+	.catch(err => console.log(err));
 
 var app = express();
 
-// app.set('port', process.env.PORT || 3100);
+// app.set('port', config.PORT || 3100);
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
 setRoutes(app);
-
 
 if (!isProduction) {
 
@@ -59,6 +60,6 @@ app.use(function (err, req, res, next) {
 	res.send(500, { message: err.message });
 });
 
-app.listen(process.env.PORT || 3100, function () {
-	console.log('Express server listening on port ' + (process.env.PORT || 3100));
+app.listen(config.PORT || 3100, function () {
+	console.log('Express server listening on port ' + (config.PORT || 3100));
 });
