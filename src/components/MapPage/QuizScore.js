@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 require('../../styles/animated-checkbox.less');
 require('./QuizScore.less');
@@ -101,7 +102,7 @@ class QuizScore extends React.Component {
 
 	onClickToggle(evt) {
 		console.log('doc body click');
-		let settingsElement = React.findDOMNode(this.refs.scoreSettings);
+		let settingsElement = ReactDOM.findDOMNode(this.refs.scoreSettings);
 		let isChildElement = settingsElement.contains(evt.target);
 
 		if (evt.target === settingsElement || isChildElement) {

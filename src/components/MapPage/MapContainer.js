@@ -1,4 +1,5 @@
 import React       from 'react';
+import ReactDOM    from 'react-dom';
 
 import QuizActions from '../../actions/QuizActions';
 import QuizStore   from '../../stores/QuizStore';
@@ -41,7 +42,7 @@ class MapContainer extends React.Component {
 
 	componentDidUpdate() {
 		if (!this.state.question.country) {
-			React.findDOMNode(this.refs.startQuizBtn).focus();
+			ReactDOM.findDOMNode(this.refs.startQuizBtn).focus();
 		}
 	}
 

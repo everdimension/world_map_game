@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import App from 'components/App';
 import router from './router';
 import AuthActions from 'actions/AuthActions';
@@ -9,7 +10,7 @@ const root = document.getElementById('app-root');
 
 router.onChange(function(RouteComponent, routeName) {
 
-	React.render(
+	ReactDOM.render(
 		(
 			<App routeName={routeName}>
 				<RouteComponent />

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 require('./Quiz.less');
 
@@ -11,17 +12,17 @@ class Quiz extends React.Component {
 	}
 
 	componentDidMount() {
-		React.findDOMNode(this.refs.quizInputRef).focus();
+		ReactDOM.findDOMNode(this.refs.quizInputRef).focus();
 		document.addEventListener('keyup', this.listenBackspace);
 	}
 
 	componentWillUnmount() {
-		React.findDOMNode(this.refs.quizForm).removeEventListener('keyup', this.listenBackspace);
+		ReactDOM.findDOMNode(this.refs.quizForm).removeEventListener('keyup', this.listenBackspace);
 	}
 
 	componentDidUpdate() {
 		if (!this.props.checkingAnswer) {
-			React.findDOMNode(this.refs.quizInputRef).focus();
+			ReactDOM.findDOMNode(this.refs.quizInputRef).focus();
 		}
 	}
 
@@ -90,7 +91,7 @@ class Quiz extends React.Component {
 	}
 
 	submitAnswer() {
-		let answer = React.findDOMNode(this.refs.quizInputRef).value;
+		let answer = ReactDOM.findDOMNode(this.refs.quizInputRef).value;
 		this.props.onAnswer(answer);
 	}
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Navbar.less';
 
 class Navbar extends React.Component {
@@ -41,8 +42,8 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-	user: React.PropTypes.object,
-	onLogout: React.PropTypes.func
+	user: PropTypes.object,
+	onLogout: PropTypes.func
 };
 
 export default Navbar;
