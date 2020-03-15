@@ -22,9 +22,8 @@ mongoose.connect(db_address, { useNewUrlParser: true, useCreateIndex: true, useU
 
 var app = express();
 
-// app.set('port', config.PORT || 3100);
-
 app.use(session({
+	genid: uuidv4,
 	secret: uuidv4(),
 	saveUninitialized: false,
 	resave: false,
@@ -46,8 +45,7 @@ if (!isProduction) {
 		ws: true
 	});
 
-	var bundle = require('./tools/bundle.js');
-	bundle();
+	var bundle = require('./tools/bundle.js')();
 
 	app.all('/build/*', function(req, res) {
 		console.log('proxying /build ...');
