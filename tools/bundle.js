@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('../webpack.config.js');
-console.log(webpackConfig);
 
 var bundle = function() {
 	var bundleStart = null;

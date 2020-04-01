@@ -32,13 +32,14 @@ function createJwtToken(user) {
 	var payload = {
 		user: user,
 		iat: new Date().getTime(),
-		exp: moment().add(7, 'days').valueOf()
+		exp: moment().add(14, 'days').valueOf()
 	};
 	return jwt.encode(payload, tokenSecret);
 }
 
 var setRoutes = function(app) {
 	app.get('/api/test', function (req, res, next) {
+		if (!req.session.user) return res.sendStatus(401);
 		return res.send('answer from server');
 	});
 
